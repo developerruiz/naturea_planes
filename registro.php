@@ -118,7 +118,7 @@
                             </div>
                             <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son
                                 14 dígitos.
-                            </p>
+                            </p>  
                         </div>
 
                         <!-- Grupo: Nombre -->
