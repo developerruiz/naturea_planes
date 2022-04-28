@@ -102,7 +102,7 @@
                             <td># <?php echo $producto['SKU']; ?></td>
                             <td><?php echo $producto['producto']; ?></td>
                             <td><?php echo $producto['beneficio']; ?></td>
-                            <td><a href="<?php echo $producto['uso']; ?>" target="_blank"><?php echo $producto['uso']; ?></a></td>
+                            <td><a href="<?php echo $producto['pdf_link'];?>" target="_blank"><?php echo $producto['pdf_link']; ?></a></td>
 
                             <!-- <td>
                                 <a href="formato_plan.php?id=<?php echo $producto['id_usuario'];?>" class="">

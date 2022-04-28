@@ -1,18 +1,58 @@
 @charset "UTF-8";
-.color-green {
-  color: #BDDB4F !important;
+@font-face {
+  font-family: Antro_Vectra;
+  src: url(../fuentes/Antro_Vectra.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+.color-blue {
+  color: #499eb2 !important;
 }
 
 .color-purple {
   color: #872FA8 !important;
 }
 
-.bg-green {
-  background: #BDDB4F !important;
+.bg-purple {
+  background: #979acc !important;
+}
+
+.border,
+.border-start,
+.border-end,
+.border-top {
+  border-color: #499eb2 !important;
+}
+
+.bg-blue {
+  background: #499eb2 !important;
+}
+
+.bg-skyblue {
+  background: #b2d5dc !important;
+}
+
+.color-skyblue {
+  color: #b2d5dc !important;
 }
 
 .bg-gray-100 {
   background-color: #f8f9fa !important;
+}
+
+.color-white {
+  color: #ffffff !important;
+}
+
+.fuente-antro {
+  font-family: Antro_Vectra !important;
 }
 
 .header--top {
@@ -365,5 +405,9 @@ input[type="text"] .form-control {
 
 .icon-cross:before {
   content: "\ea0f";
+}
+
+.bg-gradient-primary {
+  background-image: linear-gradient(310deg, #b2d5dc, #872FA8) !important;
 }
 /*# sourceMappingURL=style_dashboard.css.map */

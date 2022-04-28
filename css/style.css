@@ -671,17 +671,87 @@ form .formulario-card .btn-lg {
   -o-transition: .3s ease-in;
 }
 
-.hover-card:hover {
-  background: #BDDB4F !important;
+.hover-card-1:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5dc1cc), to(#32989b));
+  background: linear-gradient(#5dc1cc, #32989b);
   transition: .3s ease-in;
   -webkit-transition: .3s ease-in;
   -o-transition: .3s ease-in;
 }
 
-.hover-card:hover .card-title {
+.hover-card-1:hover .card-title {
   color: #F8F9F7;
   transition: .3s ease-in;
   -webkit-transition: .3s ease-in;
   -o-transition: .3s ease-in;
+}
+
+.hover-card-2:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#83c073), to(#5f8b50));
+  background: linear-gradient(#83c073, #5f8b50);
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.hover-card-2:hover .card-title {
+  color: #F8F9F7;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.hover-card-3:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4ac6c), to(#e56f18));
+  background: linear-gradient(#f4ac6c, #e56f18);
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.hover-card-3:hover .card-title {
+  color: #F8F9F7;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.hover-card-4:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a17cb3), to(#c9b1d2));
+  background: linear-gradient(#a17cb3, #c9b1d2);
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.hover-card-4:hover .card-title {
+  color: #F8F9F7;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.color-pilar1 {
+  color: #32989b;
+}
+
+.bg-circle-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5dc1cc), to(#32989b)) !important;
+  background: linear-gradient(#5dc1cc, #32989b) !important;
+}
+
+.bg-circle-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#83c073), to(#5f8b50)) !important;
+  background: linear-gradient(#83c073, #5f8b50) !important;
+}
+
+.bg-circle-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4ac6c), to(#e56f18)) !important;
+  background: linear-gradient(#f4ac6c, #e56f18) !important;
+}
+
+.bg-circle-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a17cb3), to(#c9b1d2)) !important;
+  background: linear-gradient(#a17cb3, #c9b1d2) !important;
 }
 /*# sourceMappingURL=style.css.map */

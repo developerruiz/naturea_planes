@@ -65,12 +65,12 @@
   <!-- GOOGLE ANALITYCS -->
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 ">
 
   <div class="container-fluid">
     <div class="row">
-     
-    <?php include 'complementos/slidemenu.php'?>
+
+      <?php include 'complementos/slidemenu.php'?>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 ">
 
@@ -83,39 +83,47 @@
 
         </div>
 
-        <div class="card border--dashboard shadow p-4">
-          <table class="table-sm">
-            <h2 class="fs-4 fw-bold">Informacion del cliente</h2>
-            <thead>
+        <div class="card border--dashboard blur shadow p-4">
+          <table class="table table-sm">
+            <h2 class="fs-2 fw-bold fuente-antro">Informacion del cliente</h2>
+            <thead style="border-bottom: 2px solid #499eb2 ;">
               <tr>
-                <th scope="col">foto</th>
-                <!-- <th scope="col">usuario</th> -->
-                <th scope="col">Nombre</th>
-                <th scope="col">Acciones</th>
+
+                <th colspan="2" class="color-purple">Nombre</th>
+                
+                <th class="color-purple">WhatsApp</th>
+                <th class="color-purple">Email</th>
+                <th class="color-purple">id</th>
+                <th class="color-purple">Formato</th>
+
+
               </tr>
             </thead>
 
             <?php foreach($resultado as $producto):?>
 
             <tr>
+
               <td>
-                <!-- <img src="data:image/png;base64,<?php echo base64_encode($producto['foto']); ?>"
-                  style="width:40px; height: 50px;" class="rounded-3"> -->
 
-                <img src="img/foto-usuario.png" alt="" style="width:30px; height:30px">
-
-
+                <div class="">
+                  <i class="fa-solid fa-user p-2 fs-3 bg-skyblue color-blue rounded top-0"></i>
+                </div>
               </td>
-              <!-- <td><?php echo $producto['id_usuario']; ?></td> -->
+
               <td><?php echo $producto['nombre']; ?></td>
               <td>
+                <?php echo $producto['telefono']?>
+              </td>
+              <td>
+                <?php echo $producto['email']?>
+              </td>
+              <td><?php echo $producto['id_usuario']; ?></td>
+              <td class="text-center ">
                 <a href="formato_plan.php?id=<?php echo $producto['id_usuario'];?>" class="">
-                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-file-lines fs-3 color-blue"></i>
                 </a>
 
-                <a href="">
-                  <i class="fa-solid fa-pen-to-square"></i>
-                </a>
                 </a>
               </td>
             </tr>
