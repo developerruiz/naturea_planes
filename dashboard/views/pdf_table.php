@@ -39,6 +39,7 @@ ob_start()
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../../css/style_dashboard.css">
     <link rel="stylesheet" href="../../bootstrap.min.css">
     <link rel="stylesheet" href="../../dashboard.css">
@@ -78,23 +79,7 @@ ob_start()
         include '../querys/sql.php';
     ?>
 
-    <main class="bg-formatoplan">
 
-        <?php foreach($resultado as $producto):?>
-
-            <table class="table table-striped">
-                    <tr>
-                        <td colspan="1">
-                            <img src="http://<?php echo $_SERVER['HTTP_HOST'];?>/../../img/logo-planbienestar.png" alt="">
-                        </td>
-                        <td colspan="3"></td>
-                    </tr>
-            </table>
-
-
-        <?php endforeach ?>
-
-    </main>
 
     <script src="../../js/bootstrap.bundle.min.js"></script>
 
@@ -113,6 +98,624 @@ ob_start()
     <script src="../../js/functions.js"></script>
     <script src="../../js/scripts.js"></script>
 
+    <div class="container-fluid">
+        <div class="row">
+          
+            
+            <main class=" ms-sm-auto col-lg-10">
+                
+                <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
+                
+                
+                
+                
+                <div class="mt-5 card shadow" style="padding-bottom: 200px">
+                    <table class="">
+
+                        <?php foreach($resultado as $producto):?>
+
+                        <form action="procesos/registra_prod.php" method="POST" onsubmit="return validar();" class=""
+                            enctype="multipart/form-data">
+
+                            <div class="col-lg-12 d-flex flex-wrap justify-content-start  p-4">
+
+
+
+                                <div class="col-lg-12 d-flex border--dashboard p-4">
+                                    <div class="col-lg-3">
+                                        <img src="../../img/logo-planbienestar.png" alt="" class="w-75">
+                                    </div>
+                                    <div class="col-lg-9 d-flex flex-wrap">
+
+
+
+                                        <div class="col-lg-12 d-flex justify-content-center mb-3">
+                                            <div
+                                                class="col-lg-8 text-center fw-bold bg-blue border--dashboard rounded-pill">
+                                                <h2 class="fs-1 pt-3 fuente-antro color-white">Datos Personales</h2>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-lg-5 d-flex">
+                                            <p class="m-0 p-0 color-blue">Nombre:</p>
+                                            <p class="ms-3 m-0 p-0"><?php echo $producto['nombre'];?></p>
+                                        </div>
+                                        <div class="form-group col-lg-4 d-flex">
+                                            <p class="m-0 p-0 color-blue fs-6">ID doTERRA:</p>
+                                            <p class="ms-3 m-0 p-0"><?php echo $producto['id_doterra']?></p>
+                                        </div>
+                                        <div class="form-group col-lg-3 d-flex">
+                                            <p class="m-0 p-0 color-blue fs-6">Fecha:</p>
+                                            <p class="ms-3 m-0 p-0"><?php echo $fecha_actual ?></p>
+                                        </div>
+
+
+
+                                        <div class="col-lg-12 d-flex justify-content-between">
+
+                                            <div class="form-group col-lg-2 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">Edad:</p>
+                                                <h6 class="ms-3"><?php echo $producto['edad']?></h6>
+                                            </div>
+                                            <div class="form-group col-lg-2 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">Sexo:</p>
+                                                <h6 class="ms-3"><?php echo $producto['sexo']?></h6>
+                                            </div>
+                                            <div class="form-group col-lg-3 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">Estatura:</p>
+                                                <h6 class="ms-3"><?php echo $producto['estatura']?></h6>
+                                            </div>
+                                            <div class="form-group col-lg-2 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">Peso:</p>
+                                                <h6 class="ms-3"><?php echo $producto['peso'];?>Kg</h6>
+                                            </div>
+                                            <div class="form-group col-lg-3 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">whatsApp:</p>
+                                                <h6 class="ms-3"><?php echo $producto['telefono']?></h6>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="col-lg-12 d-flex justify-content-between">
+                                            <div class="form-group col-lg-3 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">Ciudad y pais:</p>
+                                                <h6 class="ms-3"><?php echo $producto['ciudad']?></h6>
+                                            </div>
+                                            <div class="form-group col-lg-3 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">Correo:</p>
+                                                <h6 class="ms-3"><?php echo $producto['email']?></h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 d-flex justify-content-center">
+                                            <div class="form-group col-lg-3 d-flex">
+                                                <p class="m-0 p-0 color-blue fs-6">Lider:</p>
+                                                <h6 class="ms-3"><?php echo $producto['nombre_lider']?></h6>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <div class="col-lg-10 text-center fw-bold bg-blue border--dashboard rounded-pill ">
+                                        <h2 class="fs-1 pt-3 fuente-antro color-white">Principales Preocupaciones de
+                                            Salud
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 border--dashboard p-4">
+
+                                    <div class="col-12 d-flex flex-wrap">
+                                        <!-- PADECIMIENTOS -->
+
+                                        <?php 
+                                            include '../../conexion.php';
+                                            
+                                            $id_usuario = $_GET["id"];
+                                            
+                                            $sql="SELECT  (@row_number:=@row_number + 1) AS num, tb_usuario.id_usuario, relacion.id_padecimiento, padecimiento
+                                            FROM ((tb_usuario
+                                            INNER JOIN relacion ON tb_usuario.id_usuario = relacion.id_usuario)
+                                            INNER JOIN tb_padecimiento ON relacion.id_padecimiento = tb_padecimiento.id_padecimiento),
+                                            (SELECT @row_number:=0) AS t
+                                            WHERE tb_usuario.id_usuario = $id_usuario;
+                                            ORDER BY num;
+                                            ";
+                                            
+                                            $sentencia = $pdo->prepare($sql);
+                                            $sentencia->execute();
+                                            $resultado = $sentencia->fetchAll();
+
+                                            ?>
+
+                                        <?php foreach($resultado as $padecimiento):?>
+
+                                        <div class="col-4">
+
+                                            <span class=" fs-6 color-blue">
+                                                <?php echo $padecimiento['num']?>
+                                            </span>
+                                            <span class="fs-6">
+                                                <?php echo $padecimiento['padecimiento']?>
+                                            </span>
+
+                                        </div>
+
+                                        <?php endforeach ?>
+
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center col-12">
+                                    <div
+                                        class="col-lg-10 text-center fw-bold bg-blue border--dashboard rounded-pill mt-2">
+                                        <h2 class="fs-1 pt-3 fuente-antro color-white">Uso basico
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 d-flex flex-wrap mt-3 h-100">
+
+                                    <div class="col-lg-4 h-100 ">
+                                        <div class="col-lg-12 d-flex justify-content-center ">
+                                            <div class="col-lg-10 text-center bg-skyblue rounded-pill p-2">
+                                                1er Mes
+                                            </div>
+                                        </div>
+
+                                        <div class=" d-flex flex-wrap col-12 h-100 border">
+                                            <div class=" d-flex col-12">
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Producto</p>
+                                                </div>
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Beneficio</p>
+                                                </div>
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Uso</p>
+                                                </div>
+                                            </div>
+
+                                            <?php foreach($uso_basico1 as $primer_mes_basico):?>
+
+
+                                            <div class="col-4 border p-1">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $primer_mes_basico['producto']?>
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-4 border p-1">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $primer_mes_basico['beneficio']?>
+                                                </h6>
+                                            </div>
+
+                                            <div
+                                                class="col-4 border p-1  d-flex align-items-center justify-content-center">
+                                                <a href="<?php echo $primer_mes_basico['pdf_link']?>" target="_blank"><i
+                                                        class="fa-solid fa-file-pdf fs-2 color-blue"></i></a>
+
+                                            </div>
+                                            <?php endforeach ?>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-lg-4 h-100">
+
+                                        <div class="col-lg-12 border-end border-start d-flex justify-content-center">
+                                            <div class="col-lg-10 text-center  bg-skyblue rounded-pill p-2">
+                                                2do Mes
+                                            </div>
+                                        </div>
+
+
+                                        <div class="  d-flex flex-wrap col-12 h-100 border">
+                                            <div class=" d-flex col-12">
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Producto</p>
+                                                </div>
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Beneficio</p>
+                                                </div>
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Uso</p>
+                                                </div>
+                                            </div>
+
+                                            <?php foreach($uso_basico2 as $segundo_mes):?>
+
+
+                                            <div class="col-4 border p-1">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $segundo_mes['producto']?>
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-4 border p-1">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $segundo_mes['beneficio']?>
+                                                </h6>
+                                            </div>
+
+                                            <div
+                                                class="col-4 border p-1  d-flex align-items-center justify-content-center">
+                                                <a href="<?php echo $segundo_mes['pdf_link']?>" target="_blank"><i
+                                                        class="fa-solid fa-file-pdf fs-2 color-blue"></i></a>
+
+                                            </div>
+                                            <?php endforeach ?>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="col-lg-4 h-100">
+                                        <div class="col-lg-12 d-flex justify-content-center ">
+                                            <div
+                                                class="col-lg-10 text-center border-right border-start bg-skyblue rounded-pill p-2">
+                                                3er Mes
+                                            </div>
+                                        </div>
+
+
+                                        <div class="  d-flex flex-wrap col-12 h-100 border">
+                                            <div class=" d-flex col-12">
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Producto</p>
+                                                </div>
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Beneficio</p>
+                                                </div>
+                                                <div class="col-4  border text-center">
+                                                    <p class="color-purple m-0 p-0">Uso</p>
+                                                </div>
+                                            </div>
+
+                                            <?php foreach($uso_basico3 as $tercer_mes):?>
+                                            <div class="col-4 border p-1 ">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $tercer_mes['producto']?>
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-4 border p-1 ">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $tercer_mes['beneficio']?>
+                                                </h6>
+                                            </div>
+
+                                            <div
+                                                class="col-4 border p-1  d-flex align-items-center justify-content-center">
+                                                <a href="<?php echo $tercer_mes['pdf_link']?>" target="_blank"><i
+                                                        class="fa-solid fa-file-pdf fs-2 color-blue"></i></a>
+                                            </div>
+                                            <?php endforeach ?>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-lg-12 border--dashboard mt-5 container">
+
+                                <div class="d-flex justify-content-center col-12">
+                                    <div
+                                        class="col-lg-10 text-center fw-bold bg-blue border--dashboard rounded-pill mt-3">
+                                        <h2 class="fs-1 pt-3 fuente-antro color-white">Uso diario botiquin
+                                        </h2>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center col-12">
+                                    <div
+                                        class="col-lg-8 text-center fw-bold bg-skyblue border--dashboard rounded-pill mt-3">
+                                        <p class=" fs-6 fw-normal pt-3 color-blue">Es importante contar con estos
+                                            productos
+                                            durante los 3 primeros meses
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="d-flex mt-3">
+
+                                    <div class="col-lg-12">
+
+                                        <div class="border d-flex flex-wrap col-12">
+                                            <div class="col-4 border text-center">
+                                                <p class="color-purple m-0 p-0">Producto</p>
+                                            </div>
+                                            <div class="col-4 border text-center">
+                                                <p class="color-purple m-0 p-0">Beneficio</p>
+                                            </div>
+                                            <div class="col-4 border text-center">
+                                                <p class="color-purple m-0 p-0">Uso</p>
+                                            </div>
+                                            <?php foreach($usodiario1 as $uso_diario):?>
+
+
+                                            <div class="col-4 border d-flex align-items-center justify-content-center">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $uso_diario['producto']?>
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-4 border d-flex align-items-center justify-content-center">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $uso_diario['beneficio']?>
+                                                </h6>
+                                            </div>
+
+                                            <div
+                                                class="col-4 border d-flex align-items-center justify-content-center p-1">
+                                                <a href=" <?php echo $uso_diario['pdf_link']?>"><i
+                                                        class="fa-solid fa-file-pdf fs-2 color-blue"></i></a>
+
+                                            </div>
+
+
+                                            <?php endforeach ?>
+ 
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </table>
+                </div>
+
+
+                <div class="mt-5 card shadow" style="padding-bottom: 200px">
+                    <table class="">
+                        <form action="procesos/registra_prod.php" method="POST" onsubmit="return validar();" class=""
+                            enctype="multipart/form-data">
+
+                            <div class="col-lg-12 d-flex flex-wrap justify-content-start p-4">
+
+
+
+                                <div class="col-lg-12 d-flex border--dashboard px-4">
+                                    <div class="col-lg-3">
+                                        <img src="../../img/logo-planbienestar.png" alt="" class="w-75">
+                                    </div>
+                                    <div class="col-lg-9 d-flex flex-wrap">
+
+
+
+                                        <div class="col-lg-12 text-center">
+
+
+                                            <p class="fs-2 pt-3 color-purple"><?php echo $producto['nombre']?></p>
+
+                                        </div>
+                                        <div class="col-lg-12 d-flex justify-content-center">
+                                            <div
+                                                class="col-lg-12 text-center fw-bold bg-blue border--dashboard rounded-pill ">
+                                                <h3 class="fs-2 pt-3 fuente-antro color-white">Beneficios
+                                                </h3>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="col-lg-12 my-3">
+
+
+
+                                            <ul class="d-flex flex-wrap">
+                                                <?php foreach($beneficios as $beneficio):?>
+                                                <li class="col-lg-6 pe-3">
+                                                    <p class="p-0 m-1" style="font-size: 10px;">
+                                                        <?php echo $beneficio['beneficio']?>
+                                                    </p>
+                                                </li>
+                                                <?php endforeach ?>
+                                            </ul>
+
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <div class="col-lg-10 text-center fw-bold bg-blue border--dashboard rounded-pill ">
+                                        <h2 class="fs-1 pt-3 fuente-antro color-white">Uso complementario
+
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center col-12">
+                                    <div
+                                        class="col-lg-8 text-center fw-bold bg-skyblue border--dashboard rounded-pill mt-3">
+                                        <p class=" fs-6 fw-normal pt-3 color-blue">Es importante contar con estos
+                                            productos durante los 3 primeros meses
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-lg-12 border--dashboard container">
+
+
+                                <div class="d-flex">
+
+                                    <div class="col-lg-12">
+
+                                        <div class="border d-flex flex-wrap col-12">
+                                            <div class="col-4 border text-center">
+                                                <p class="color-purple m-0 p-0">Producto</p>
+                                            </div>
+                                            <div class="col-4 border text-center">
+                                                <p class="color-purple m-0 p-0">Beneficio</p>
+                                            </div>
+                                            <div class="col-4 border text-center">
+                                                <p class="color-purple m-0 p-0">Uso</p>
+                                            </div>
+                                            <?php foreach($uso_complementario as $complementario):?>
+
+
+                                            <div class="col-4 border d-flex align-items-center justify-content-center">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $complementario['producto']?>
+                                                </h6>
+                                            </div>
+
+                                            <div class="col-4 border d-flex align-items-center justify-content-center">
+                                                <h6 style="font-size: 12px;">
+                                                    <?php echo $complementario['beneficio']?>
+                                                </h6>
+                                            </div>
+
+                                            <div
+                                                class="col-4 border d-flex align-items-center justify-content-center p-1">
+                                                <a href=" <?php echo $complementario['pdf_link']?>"><i
+                                                        class="fa-solid fa-file-pdf fs-2 color-blue"></i></a>
+
+                                            </div>
+
+
+                                            <?php endforeach ?>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 d-flex justify-content-evenly mt-3">
+                                        <div class="col-lg-4 d-flex  bg-skyblue  rounded-pill text-center">
+
+                                            <div
+                                                class="col-lg-12 text-center fw-bold bg-skyblue border--dashboard rounded-pill 0">
+                                                <p class="m-0 p-2 fs-6 fw-normal  color-blue">METODOS DE APLICACIÓN
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 d-flex  bg-skyblue  rounded-pill text-center">
+
+                                            <div
+                                                class="col-lg-12 text-center fw-bold bg-skyblue border--dashboard rounded-pill 0">
+                                                <p class="m-0 p-1 fs-6 fw-normal  color-blue">SENSIBILIDAD DE LA PIEL
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="container">
+                                        <div class="col-lg-12 d-flex justify-content-evenly">
+                                            <div class="col-lg-4">
+                                                <ul class="list-unstyled mt-2">
+                                                    <li>
+                                                        <p class="m-0 p-0" style="font-size: 12px;"> A = Puede ser usado
+                                                            Aromaticamente </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="m-0 p-0" style="font-size: 12px;"> T = Puede ser usado
+                                                            Topicamente</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="m-0 p-0" style="font-size: 12px;"> P = Puede ser usado
+                                                            topicamente sin diluir (PURO)</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <ul class="list-unstyled mt-2">
+                                                    <li>
+                                                        <p class="m-0 p-0" style="font-size: 12px;"> A = Puede ser usado
+                                                            Aromaticamente </p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="m-0 p-0" style="font-size: 12px;">T = Puede ser usado
+                                                            Topicamente</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="m-0 p-0" style="font-size: 12px;">P = Puede ser usado
+                                                            topicamente sin diluir (PURO)</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="col-lg-12 d-flex bg-purple  rounded-pill text-center">
+
+                                            <div
+                                                class="col-lg-12 text-center fw-bold bg-purple border--dashboard rounded-pill 0">
+                                                <p class="m-0 p-1 fw-normal  color-skyblue" style="font-size: 14px;">El
+                                                    Aceite de Coco,
+                                                    Corporal de doTERRA está diseñado para mezclarse con tus aceites
+                                                    esenciales favoritos. Excepcionalmente
+                                                    hidratante para una piel suave y flexible
+                                                </p>
+                                            </div>
+
+
+
+                                        </div>
+                                        <div class="mt-2" style="border-bottom: 2px solid #499eb2 ">
+                                            <p class="text-center text-muted" style="font-size: 10px;">
+                                                * Estas declaraciones no han sido evaluadas por la Administración de
+                                                Alimentos y Medicamentos (FDA, por sus siglas en inglés). Estos
+                                                productos no
+                                                tiene el propósito de diagnosticar, tratar,
+                                                curar o evitar ninguna enfermedad.
+                                            </p>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <p class="m-0 p-0 text-muted" style="font-size: 9px;">Lizeth Baldemar</p>
+                                            <p class="m-0 p-0 text-muted" style="font-size: 9px;">Diamante Presidencial,
+                                                Fundadora de Mexico</p>
+                                            <p class="m-0 p-0 text-muted" style="font-size: 9px;">11 años Usando y
+                                                disfrutanto los aceites esenciales de doTERRA</p>
+                                            <p class="m-0 p-0 text-muted" style="font-size: 9px;">WhatsApp 6564183692
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </table>
+                </div>
+            </main>
+
+            <?php endforeach ?>
+        </div>
+    </div>
 
 
 </body>
@@ -126,11 +729,12 @@ $html= ob_get_clean();
 require_once '../assets/libreria/dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
-
 $options = $dompdf->getOptions();
 $options->set(array('isRemoteEnable' => true));
 $dompdf->setOptions($options);
 
+$css = file_get_contents('../../css/style.css');
+$dompdf-> writeHTML($css, 1);
 $dompdf->loadHtml($html);
 $dompdf->setPaper('letter');
 
