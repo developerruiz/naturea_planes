@@ -717,11 +717,11 @@ form .formulario-card .btn-lg {
 }
 
 .hover-card-4:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#a17cb3), to(#c9b1d2));
-  background: linear-gradient(#a17cb3, #c9b1d2);
-  transition: .3s ease-in;
-  -webkit-transition: .3s ease-in;
-  -o-transition: .3s ease-in;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a17cb3), to(#c9b1d2)) !important;
+  background: linear-gradient(#a17cb3, #c9b1d2) !important;
+  transition: 0.3s ease-in !important;
+  -webkit-transition: 0.3s ease-in !important;
+  -o-transition: 0.3s ease-in !important;
 }
 
 .hover-card-4:hover .card-title {
