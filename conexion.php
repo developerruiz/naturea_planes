@@ -1,3 +1,8 @@
 <?php
-$conexion = mysqli_connect("localhost","root","","u838276928_dbnatureamx");
-
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=db_natureaplanes', 'root', '');
+} catch (PDOException $e) {
+    print "¡Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+?>

@@ -657,8 +657,43 @@ form .formulario-card .btn-lg {
     -o-transition: .3s ease-in;
 }
 
-.hover-card:hover {
-    background: $color-verde !important;
+.hover-card-1:hover {
+    background:linear-gradient(#5dc1cc , #32989b);
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+
+    .card-title {
+
+        color: $color-blanco;
+        transition: .3s ease-in;
+        -webkit-transition: .3s ease-in;
+        -o-transition: .3s ease-in;
+
+    }
+
+}
+
+.hover-card-2:hover {
+    background:linear-gradient(#83c073 , #5f8b50);
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+
+    .card-title {
+
+        color: $color-blanco;
+        transition: .3s ease-in;
+        -webkit-transition: .3s ease-in;
+        -o-transition: .3s ease-in;
+    }
+}
+
+
+
+.hover-card-3:hover {
+    background:linear-gradient(#f4ac6c , #e56f18);
+
     transition: .3s ease-in;
     -webkit-transition: .3s ease-in;
     -o-transition: .3s ease-in;
@@ -673,3 +708,34 @@ form .formulario-card .btn-lg {
     }
 }
 
+.hover-card-4:hover {
+    // background: #a17cb3 ;
+    background:linear-gradient(#a17cb3 , #c9b1d2)!important;
+    transition: .3s ease-in!important;
+    -webkit-transition: .3s ease-in!important;
+    -o-transition: .3s ease-in!important;
+
+    .card-title {
+
+        color: $color-blanco;
+        transition: .3s ease-in;
+        -webkit-transition: .3s ease-in;
+        -o-transition: .3s ease-in;
+    }
+}
+
+.color-pilar1{
+    color:#32989b;
+}
+.bg-circle-1{
+    background:linear-gradient(#5dc1cc , #32989b)!important;
+}
+.bg-circle-1{
+    background:linear-gradient(#83c073 , #5f8b50)!important;
+}
+.bg-circle-1{
+    background:linear-gradient(#f4ac6c , #e56f18)!important;
+}
+.bg-circle-1{
+    background:linear-gradient(#a17cb3 , #c9b1d2)!important;
+}

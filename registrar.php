@@ -1,47 +1,44 @@
 <?php 
-  include ('conexion.php');
-
+  include 'conexion2.php';
   
   $nombre                   = $_POST['nombre'];
   $telefono                 = $_POST['telefono'];
-  $genero                   = $_POST['genero'];
+  $sexo                     = $_POST['sexo'];
   $edad                     = $_POST['edad'];
-  $peso                     = $_POST['peso'];
   $estatura                 = $_POST['estatura'];
   $email                    = $_POST['correo'];
   $id_doterra               = $_POST['id_doterra'];
   $inscripcion              = $_POST['inscripcion'];
-  $ciudad                   = $_POST['ciudad'];
   $estado                   = $_POST['estado'];
+  $ciudad                   = $_POST['ciudad'];
   $nombre_lider             = $_POST['nombre_lider'];
-  $sintomas                 = $_POST['sintomas'];
+
+  $padecimiento           = '';
+
   $dispuesto                = $_POST['dispuesto'];
   $dispuesto_texto          = $_POST['dispuesto_texto'];
-  $familiar                 =$_POST['familiar'];
+  $familiar                 = $_POST['familiar'];
+  $peso                     = $_POST['peso'];
 
 
-//   $destinatario = 'ivanrur95@gmail.com';  
+  $insertar_usuario = "INSERT INTO tb_usuario SET nombre ='$nombre', telefono= '$telefono', sexo = '$sexo', edad = '$edad', estatura= '$estatura', email = '$email', id_doterra = '$id_doterra', contacto = '$inscripcion', ciudad = '$ciudad', estado = '$estado', nombre_lider='$nombre_lider', dispuesto_descripcion = '$dispuesto_texto', nombre_familiar = '$familiar', dispuesto_pregunta='$dispuesto', peso = '$peso'";
+  mysqli_query($conexion, $insertar_usuario);
 
-  $insertar = "INSERT INTO tb_registro (nombre, email, fecha_nacimiento, ciudad, estado, municipio, codigo_postal, telefono, solicitud, medio, otro) VALUES
-  ('$nombre','$email','$fecha_nacimiento','$ciudad','$estado','$municipio','$codigo_postal','$telefono', '$solicitud', '$medio_enterado', '$otro')";
+  $id_usuario= mysqli_insert_id($conexion);
 
-$resultado = mysqli_query($conexion, $insertar);
+  foreach ( $_POST['padecimiento'] as $id_padecimiento ){    
 
-  if ($resultado) {
-    
-    echo "<script>alert('Registro exitoso');</script><script>window.location='registro.php'</script>";   
+  $insertar_categoria = "INSERT INTO relacion  SET id_usuario='$id_usuario', id_padecimiento='$id_padecimiento'";
+  mysqli_query($conexion, $insertar_categoria);
 
-  }else {
-    echo "<script>alert('error de registro');window,history.go(-1);</script>";
+
+    if ( $insertar_categoria) {
+      echo "<script>alert('Registro exitoso');</script><script>window.location='formulario_planes.php'</script>";  
+    }else {
+      echo "<script>alert('error de registro :/');window,history.go(-1);</script>";
+    }
+
   }
 
-//   $header = "Nueva requisicion";
-//   $mensajeCompleto = "\nNueva petición de:" . $nombre . "\nTipo de solicitud: " . $tipo_solicitud . "\nDesatalle: " . $descripcion . "\nOficina: " . $oficina;
-//   mail($destinatario, $mensajeCompleto, $header);
 
-// if (mail) {
-//   echo "<script>alert('se ha enviado un correo de aviso de tu solicitud registrada')</script>";
-//   echo "<script> setTimeout(\"location.href='usuario.php'\",1000)</script>";
-// }else{
-//   echo "<script>alert('error no se pudo enviar el correo');</script>";
-// }
+
