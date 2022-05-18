@@ -292,8 +292,6 @@ $beneficios = $consulta_beneficio->fetchAll();
                                             <p class="ms-3 m-0 p-0"><?php echo $fecha_actual ?></p>
                                         </div>
 
-
-
                                         <div class="col-lg-12 d-flex justify-content-between">
 
                                             <div class="form-group col-lg-2 d-flex">
