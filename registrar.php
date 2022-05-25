@@ -21,16 +21,9 @@
   $peso                     = $_POST['peso'];
 
 
-  define ("DEMO", true);
-  $template_file = "./sendEmail.php";
-
-  // Enviar correo electronico
+  // ENviar correo electronico
   $subject = "simple emails with php";
-  
-  $swap_var = array(
-      "{CUSTOM_URL}" => "http://prueba.natureaplanes.com/formato_plan.php?id='$id_usuario'",
-      "{TO_NAME}" => "'$nombre'",  
-  );
+  $message = "this was sent with a php script\n \n even  has new lines";
 
   $headers = "From: prueba naturea <prueba@planesnaturea.com>\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
@@ -42,25 +35,25 @@
 
   $id_usuario= mysqli_insert_id($conexion);
 
-  // Create the HTML message
-  if (file_exists($template_file)) 
-    
-    $message = file_get_contents($template_file);
-  else 
-    die("unable to locate the tamplate file");
 
-  foreach (array_keys($swap_var) as $key) {
-        if (strlen($key) > 2 && trim($key) != "")
-        $message = str_replace($key, $swap_var[$key], $message);
-  }
- 
-  echo $message;
 
-  if(DEMO)
-  die("<hr />no emails was sent on puropse");
+  $message = "<html>
+  
+    <body>
+      <h1>Checkout thist H1 tag</h1>
+      <p>with <i>aragraphs</i></p>
 
+      <h2>Checkout this H2</h2>
+      <p>With paragraphs</p>
+    </body>
+  
+  </html>";
   // Correo electrónico
   mail($email, $subject, $message, $headers);
+
+
+
+
 
 
   foreach ( $_POST['padecimiento'] as $id_padecimiento ){    
