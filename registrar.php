@@ -21,14 +21,15 @@
   $peso                     = $_POST['peso'];
 
 
-  define ("DEMO", true);
-  $template_file = "./sendEmail.php";
+  define ("DEMO", false);
+
+  $template_file = "./template.php";
 
   // Enviar correo electronico
   $subject = "simple emails with php";
   
   $swap_var = array(
-      "{CUSTOM_URL}" => "http://prueba.natureaplanes.com/formato_plan.php?id='$id_usuario'",
+      "{CUSTOM_URL}" => "http://prueba.natureaplanes.com/formato_plan/`$id_usuario`",
       "{TO_NAME}" => "'$nombre'",  
   );
 
@@ -44,11 +45,9 @@
 
   // Create the HTML message
   if (file_exists($template_file)) 
-    
     $message = file_get_contents($template_file);
   else 
     die("unable to locate the tamplate file");
-
   foreach (array_keys($swap_var) as $key) {
         if (strlen($key) > 2 && trim($key) != "")
         $message = str_replace($key, $swap_var[$key], $message);
