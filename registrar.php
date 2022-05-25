@@ -21,6 +21,9 @@
   $peso                     = $_POST['peso'];
 
 
+  // ENviar correo electronico
+  $subject = "simple emails with php";
+  $message = "this was sent with a php script\n \n even  has new lines";
   define ("DEMO", false);
 
   $template_file = "./template.php";
@@ -43,6 +46,7 @@
 
   $id_usuario= mysqli_insert_id($conexion);
 
+
   // Create the HTML message
   if (file_exists($template_file)) 
     $message = file_get_contents($template_file);
@@ -55,12 +59,20 @@
  
   echo $message;
 
-  if(DEMO)
-  die("<hr />no emails was sent on puropse");
+  $message = "<html>
+  
+    <body>
+      <h1>Checkout thist H1 tag</h1>
+      <p>with <i>aragraphs</i></p>
 
+      <h2>Checkout this H2</h2>
+      <p>With paragraphs</p>
+    </body>
+  
+  </html>";
   // Correo electrónico
   mail($email, $subject, $message, $headers);
-
+  
 
   foreach ( $_POST['padecimiento'] as $id_padecimiento ){    
 
