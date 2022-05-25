@@ -296,149 +296,154 @@
                             <div class="col-lg-12 d-flex flex-wrap" id="sintomas">
 
                                 <div class="col-lg-6 col-12 formulario__label ">
-                                <div>
-            <input type="checkbox" name="padecimiento[]" id="cansancio" value="1">
-            <label class="fw-bold mb-3" for="cansancio">Cansancio crónico</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="estres" value="2">
-            <label class="fw-bold mb-3" for="estres">Estrés</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="depresion" value="3">
-            <label class="fw-bold mb-3" for="depresion">Depresión</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="estreñimineto" value="4">
-            <label class="fw-bold mb-3" for="estreñimineto">Estreñimiento</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="insomnio" value="5">
-            <label class="fw-bold mb-3" for="insomnio">Insomnio</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="sobre-peso" value="6">
-            <label class="fw-bold mb-3" for="sobre-peso">Sobre peso</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="enfermizo" value="7">
-            <label class="fw-bold mb-3" for="enfermizo">Ser muy enfermizo</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="acne" value="8">
-            <label class="fw-bold mb-3" for="acne">Acné</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="colitis" value="9">
-            <label class="fw-bold mb-3" for="colitis">Colitis</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="ansiedad" value="10">
-            <label class="fw-bold mb-3" for="ansiedad">Ansiedad</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="indigestion" value="11">
-            <label class="fw-bold mb-3" for="indigestion">Indigestión</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="gastritis" value="12">
-            <label class="fw-bold mb-3" for="gastritis">Gastritis</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="varices" value="13">
-            <label class="fw-bold mb-3" for="varices">Varices</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="alergias" value="14">
-            <label class="fw-bold mb-3" for="alergias">Alergias</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="presion-alta" value="15">
-            <label class="fw-bold mb-3" for="presion-alta">Presión alta</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="colesterol-alto" value="16">
-            <label class="fw-bold mb-3" for="colesterol-alto">Colesterol alto</label>
-        </div>
-    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="cansancio" value="1">
+                                        <label class="fw-bold mb-3" for="cansancio">Cansancio crónico</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="estres" value="2">
+                                        <label class="fw-bold mb-3" for="estres">Estrés</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="depresion" value="3">
+                                        <label class="fw-bold mb-3" for="depresion">Depresión</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="estreñimineto" value="4">
+                                        <label class="fw-bold mb-3" for="estreñimineto">Estreñimiento</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="insomnio" value="5">
+                                        <label class="fw-bold mb-3" for="insomnio">Insomnio</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="sobre-peso" value="6">
+                                        <label class="fw-bold mb-3" for="sobre-peso">Sobre peso</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="enfermizo" value="7">
+                                        <label class="fw-bold mb-3" for="enfermizo">Ser muy enfermizo</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="acne" value="8">
+                                        <label class="fw-bold mb-3" for="acne">Acné</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="colitis" value="9">
+                                        <label class="fw-bold mb-3" for="colitis">Colitis</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="ansiedad" value="10">
+                                        <label class="fw-bold mb-3" for="ansiedad">Ansiedad</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="indigestion" value="11">
+                                        <label class="fw-bold mb-3" for="indigestion">Indigestión</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="gastritis" value="12">
+                                        <label class="fw-bold mb-3" for="gastritis">Gastritis</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="varices" value="13">
+                                        <label class="fw-bold mb-3" for="varices">Varices</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="alergias" value="14">
+                                        <label class="fw-bold mb-3" for="alergias">Alergias</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="presion-alta" value="15">
+                                        <label class="fw-bold mb-3" for="presion-alta">Presión alta</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="colesterol-alto" value="16">
+                                        <label class="fw-bold mb-3" for="colesterol-alto">Colesterol alto</label>
+                                    </div>
+                                </div>
 
-    <div class="col-lg-6 col-12 formulario__label ">
+                                <div class="col-lg-6 col-12 formulario__label ">
 
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="acido-urico" value="17">
-            <label class="fw-bold mb-3" for="acido-urico">Ácido úrico alto</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="infeccion-orina" value="18">
-            <label class="fw-bold mb-3" for="infeccion-orina">Infecciones de orina
-                recurrentes</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="adicciones" value="19">
-            <label class="fw-bold mb-3" for="adicciones">Adicciones</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="problemas-menstruales" value="20">
-            <label class="fw-bold mb-3" for="problemas-menstruales">Problemas
-                mestruales</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="dolor-espalda" value="21">
-            <label class="fw-bold mb-3" for="dolor-espalda">Dolor de espalda</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="dolor-cuello" value="22">
-            <label class="fw-bold mb-3" for="dolor-cuello">Dolor de cuello</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="perdida-memoria" value="23">
-            <label class="fw-bold mb-3" for="perdida-memoria">Perdida de memoria</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="piedras-riñones" value="24">
-            <label class="fw-bold mb-3" for="piedras-riñones">Piedras en los riñones</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="dolor-articulaciones" value="25">
-            <label class="fw-bold mb-3" for="dolor-articulaciones">Dolor de las
-                articulaciones</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="obesidad" value="26">
-            <label class="fw-bold mb-3" for="obesidad">Obesidad</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="manchas-cara" value="27">
-            <label class="fw-bold mb-3" for="manchas-cara">Manchas en la cara</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="problemas-piel" value="28">
-            <label class="fw-bold mb-3" for="problemas-piel">Problemas en la piel</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="enfermedades-cronicas" value="29">
-            <label class="fw-bold mb-3" for="enfermedades-cronicas">Enfermedades
-                crónicas</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="hemorroides" value="30">
-            <label class="fw-bold mb-3" for="hemorroides">Hemorroides</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="problemas-hormonales" value="31">
-            <label class="fw-bold mb-3" for="problemas-hormonales">Problemas
-                hormonales</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="intoleracia-lactosa" value="32">
-            <label class="fw-bold mb-3" for="intoleracia-lactosa">Intolerancia a la
-                lactosa</label>
-        </div>
-        <div>
-            <input type="checkbox" name="padecimiento[]" id="problemas-azucar" value="33">
-            <label class="fw-bold mb-3" for="problemas-azucar">Problemas con el
-                azúcar</label>
-        </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="acido-urico" value="17">
+                                        <label class="fw-bold mb-3" for="acido-urico">Ácido úrico alto</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="infeccion-orina" value="18">
+                                        <label class="fw-bold mb-3" for="infeccion-orina">Infecciones de orina
+                                            recurrentes</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="adicciones" value="19">
+                                        <label class="fw-bold mb-3" for="adicciones">Adicciones</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="problemas-menstruales"
+                                            value="20">
+                                        <label class="fw-bold mb-3" for="problemas-menstruales">Problemas
+                                            mestruales</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="dolor-espalda" value="21">
+                                        <label class="fw-bold mb-3" for="dolor-espalda">Dolor de espalda</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="dolor-cuello" value="22">
+                                        <label class="fw-bold mb-3" for="dolor-cuello">Dolor de cuello</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="perdida-memoria" value="23">
+                                        <label class="fw-bold mb-3" for="perdida-memoria">Perdida de memoria</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="piedras-riñones" value="24">
+                                        <label class="fw-bold mb-3" for="piedras-riñones">Piedras en los riñones</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="dolor-articulaciones"
+                                            value="25">
+                                        <label class="fw-bold mb-3" for="dolor-articulaciones">Dolor de las
+                                            articulaciones</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="obesidad" value="26">
+                                        <label class="fw-bold mb-3" for="obesidad">Obesidad</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="manchas-cara" value="27">
+                                        <label class="fw-bold mb-3" for="manchas-cara">Manchas en la cara</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="problemas-piel" value="28">
+                                        <label class="fw-bold mb-3" for="problemas-piel">Problemas en la piel</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="enfermedades-cronicas"
+                                            value="29">
+                                        <label class="fw-bold mb-3" for="enfermedades-cronicas">Enfermedades
+                                            crónicas</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="hemorroides" value="30">
+                                        <label class="fw-bold mb-3" for="hemorroides">Hemorroides</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="problemas-hormonales"
+                                            value="31">
+                                        <label class="fw-bold mb-3" for="problemas-hormonales">Problemas
+                                            hormonales</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="intoleracia-lactosa"
+                                            value="32">
+                                        <label class="fw-bold mb-3" for="intoleracia-lactosa">Intolerancia a la
+                                            lactosa</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="padecimiento[]" id="problemas-azucar" value="33">
+                                        <label class="fw-bold mb-3" for="problemas-azucar">Problemas con el
+                                            azúcar</label>
+                                    </div>
 
                                 </div>
                             </div>
@@ -466,7 +471,8 @@
 
                         <!-- Grupo: Nombre de tu líder -->
                         <div class="formulario__grupo" id="grupo__nombre_dispuesto_texto">
-                            <label for="dispuesto_texto" class="formulario__label">Si tu respuesta anterior fue si o talvez, ¿Por qué estarías dispuesto? </label>
+                            <label for="dispuesto_texto" class="formulario__label">Si tu respuesta anterior fue si o
+                                talvez, ¿Por qué estarías dispuesto? </label>
                             <div class="formulario__grupo-input">
                                 <input type="text" class="formulario__input" name="dispuesto_texto" id="dispuesto_texto"
                                     placeholder="Respuesta" require>
@@ -492,8 +498,8 @@
                         </div>
 
 
-                          <!-- Grupo: Terminos y Condiciones -->
-                          <div class="formulario__grupo" id="grupo__terminos">
+                        <!-- Grupo: Terminos y Condiciones -->
+                        <div class="formulario__grupo" id="grupo__terminos">
                             <label class="formulario__label">
                                 <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
                                 Acepto los Términos y Condiciones

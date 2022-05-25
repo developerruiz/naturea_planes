@@ -1,0 +1,4 @@
+Options +FollowSymlinks 
+RewriteEngine on 
+
+RewriteRule ^formato_plan/([0-9]+)$  formato_plan.php?id=$1

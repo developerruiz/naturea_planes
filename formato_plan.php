@@ -254,6 +254,25 @@ $beneficios = $consulta_beneficio->fetchAll();
                 <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
                 <?php include 'complementos/header-dashboard.php'?>
 
+                <div class="d-flex justify-content-between mb-4">
+                    <h2 class="fs-4 fw-bold">Lista productos</h2>
+                    <div class="d-flex">
+                        <div>
+                            <a href="excel.php">
+                                <button class="btn btn-success shadow"><i class="fa-solid fa-file-excel"></i> Descargar
+                                    excel </button>
+                            </a>
+                        </div>
+
+                        <div class="ms-3">
+                            <a href="./dashboard/views/pdf.php?id=<?php echo $producto['id_usuario'];?>" class=""" target="_blank">
+                                <button class="btn btn-danger"><i class="fa-solid fa-file-pdf"></i> Ver
+                                    PDF</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
 
 
                 <div class="mt-5 card shadow" style="padding-bottom: 200px">
