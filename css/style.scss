@@ -710,10 +710,10 @@ form .formulario-card .btn-lg {
 
 .hover-card-4:hover {
     // background: #a17cb3 ;
-    background:linear-gradient(#a17cb3 , #c9b1d2);
-    transition: .3s ease-in;
-    -webkit-transition: .3s ease-in;
-    -o-transition: .3s ease-in;
+    background:linear-gradient(#a17cb3 , #c9b1d2)!important;
+    transition: .3s ease-in!important;
+    -webkit-transition: .3s ease-in!important;
+    -o-transition: .3s ease-in!important;
 
     .card-title {
 
