@@ -24,6 +24,17 @@
   // ENviar correo electronico
   $subject = "simple emails with php";
   $message = "this was sent with a php script\n \n even  has new lines";
+  define ("DEMO", false);
+
+  $template_file = "./template.php";
+
+  // Enviar correo electronico
+  $subject = "simple emails with php";
+  
+  $swap_var = array(
+      "{CUSTOM_URL}" => "http://prueba.natureaplanes.com/formato_plan/`$id_usuario`",
+      "{TO_NAME}" => "'$nombre'",  
+  );
 
   $headers = "From: prueba naturea <prueba@planesnaturea.com>\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
@@ -36,6 +47,17 @@
   $id_usuario= mysqli_insert_id($conexion);
 
 
+  // Create the HTML message
+  if (file_exists($template_file)) 
+    $message = file_get_contents($template_file);
+  else 
+    die("unable to locate the tamplate file");
+  foreach (array_keys($swap_var) as $key) {
+        if (strlen($key) > 2 && trim($key) != "")
+        $message = str_replace($key, $swap_var[$key], $message);
+  }
+ 
+  echo $message;
 
   $message = "<html>
   
@@ -50,11 +72,7 @@
   </html>";
   // Correo electrónico
   mail($email, $subject, $message, $headers);
-
-
-
-
-
+  
 
   foreach ( $_POST['padecimiento'] as $id_padecimiento ){    
 
